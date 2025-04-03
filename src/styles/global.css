@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Figtree";
+  font-style: normal;
+  font-weight: 100 900;
+  src: url("/fonts/Figtree-VariableFont_wght.woff2") format("woff2"),
+    url("/fonts/Figtree-VariableFont_wght.woff") format("woff"),
+    url("/fonts/Figtree-VariableFont_wght.ttf") format("truetype");
+  font-display: swap;
+}
+
+@theme {
+  /* NUESTRA PALETA DE COLORES */
+  --color-servitec-50: #edfcff;
+  --color-servitec-100: #d6f7ff;
+  --color-servitec-200: #b5f3ff;
+  --color-servitec-300: #83eeff;
+  --color-servitec-400: #48e1ff;
+  --color-servitec-500: #1ec7ff;
+  --color-servitec-600: #06acff;
+  --color-servitec-700: #0099ff;
+  --color-servitec-800: #0874c5;
+  --color-servitec-900: #0d629b;
+  --color-servitec-950: #0e3b5d;
+  --color-servitec-main: #0008ff;
+  /* ====================================================================== */
+
+  /* BREAKPOINTS */
+  /* ====================================================================== */
+  --breakpoint-tablet: 640px;
+  --breakpoint-laptop: 1024px;
+  --breakpoint-desktop: 1280px;
+  /* ====================================================================== */
+}
+
+body {
+  font-family: "Figtree", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif,
+    Courier;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}

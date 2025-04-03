@@ -1,0 +1,32 @@
+---
+
+import ContainerCenter from "@components/ContainerCenter.astro"
+import {productsBrands} from "@data/dataInfo"
+import { Image } from "astro:assets"
+
+---
+
+<section class="flex items-center w-full justify-center px-6 laptop:px-0 ">
+  <ContainerCenter class="flex flex-col justify-center items-center laptop:flex-row">
+      <header>
+        <h2 class="font-semibold text-xl text-gray-700 opacity-30 laptop:mr-8">
+          Nuestras marcas:
+        </h2>
+      </header>
+      <div class="flex items-center justify-center gap-4 laptop:gap-4 flex-wrap">
+        {productsBrands !== null
+          ? productsBrands.map((brand) => (
+              <div
+                class="w-[5.5rem] h-[5.5rem]"
+              >
+                 <Image
+                  class=" w-[100%] h-[100%] object-contain opacity-20 hover:scale-105 "
+                  src={brand.urlBrand}
+                 alt={`logo-${brand.name}`}
+                />
+              </div>
+            ))
+          : null}
+      </div>
+</ContainerCenter>
+</section>

@@ -1,11 +1,23 @@
 ---
 import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import Hero from '@components/sections/Hero.astro';
+import BannerBrand from '@components/sections/BannerBrand.astro';
+import BannerMercadoPago from '@components/sections/BannerMercadoPago.astro';
+import BannerMagSafe from '@components/sections/BannerMagSafe.astro';
+import BannerMap from '@components/sections/BannerMap.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import "@styles/global.css";
+import PurchaseMethod from '@components/sections/PurchaseMethod.astro';
+import FloatingButton from '@components/FloatingButton.astro';
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Servitec: Servicios de Mantenimiento y Venta de Tecnología">
+	<Hero />
+	<BannerBrand />
+	<PurchaseMethod />
+	<BannerMercadoPago />
+	<BannerMagSafe />
+	<BannerMap />
+	<FloatingButton />
 </Layout>
