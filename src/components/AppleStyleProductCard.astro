@@ -1,0 +1,52 @@
+---
+import { Image } from "astro:assets";
+import ButtonLinkWhatsApp from "./ButtonLinkWhatsApp.astro";
+
+const { productData } = Astro.props;
+const { image, name, oldPrice, price } = productData;
+const imageUrl = `https://servitec-halacho.netlify.app${image}`; // URL de la imagen en la carpeta public
+
+  let message = `Hola👋, me gustaría adquirir el siguiente producto: ${name} ${imageUrl}`;
+
+---
+
+<div class=" max-w-sm mx-auto overflow-hidden bg-[#FAFAFA] rounded-2xl shadow-lg card-product ease-in duration-300 w-[20rem] text-center p-0 flex flex-col snap-center flex-shrink-0 border border-servitect-700 hover:cursor-pointer hover:scale-[1.03] hover:ease-in">
+      <header class="h-[7.5rem] flex items-center justify-center">
+        <h2 class="font-bold text-2xl tracking-tight overflow-hidden text-ellipsis whitespace-pre-line line-clamp-3">
+          {name}
+        </h2>
+      </header>
+      <section class="px-2 flex-1">
+        <div class="w-full aspect-[5/6] relative overflow-hidden bg-gray-100">
+          <Image
+              src={image}
+              alt="logo Servitec"
+              class="object-cover w-full h-full"
+          />
+        </div>
+
+        <div class="flex flex-col items-center space-y-4">
+          <p class="font-semibold text-2xl">
+            Por tan solo:{" "}
+            <span class="text-servitect-800 text-3xl font-bold">
+              ${price.toFixed(2)}
+            </span>
+          </p>
+
+          <div class="w-16 h-1 bg-gradient-to-r from-gray-200 to-gray-300 rounded-full"></div>
+
+          <ButtonLinkWhatsApp message={message} title="Adquirir" />
+        </div>
+        <footer class="my-4">
+          <p class="">
+            Precio anterior:{" "}
+            <span class="line-through text-red-600">
+              ${oldPrice.toFixed(2)}
+            </span>
+          </p>
+        </footer>
+      </section>
+      <div class="absolute top-4 right-4">
+        <div class="w-4 h-4 rounded-full bg-servitect-800"></div>
+      </div>
+</div>

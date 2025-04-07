@@ -1,0 +1,43 @@
+---
+import Carousel from "@components/Carousel.astro"
+import AppleStyleProductCard from "@components/AppleStyleProductCard.astro"
+import { products } from "@data/dataProducts"
+---
+<section class="text-center my-4">
+      <header class="text-start laptop:w-[80%] m-auto px-5 laptop:p-0">
+        <h2 class=" animate-fill-forwards text-[2rem] font-semibold tracking-tight leading-none laptop:text-[3.5rem]">
+            Nuestros productos más vendidos
+          </h2>
+        <h4 class="text-[1.1rem] text-gray-700 laptop:text-[1.5rem]">
+            Adquiere calidad a precios top.
+        </h4>
+      </header>
+
+      <Carousel carouselId="product-carousel">
+        <div
+         
+          class="card-product  ease-in duration-300 w-[20rem] text-start p-4 flex flex-col snap-center flex-shrink-0 rounded-lg border border-servitect-700 overflow-hidden hover:cursor-pointer hover:scale-[1.03] hover:ease-in"
+        >
+          <h2 class="font-semibold text-3xl mt-4">Ponte a la moda</h2>
+          <p class="text-lg tracking-wide">
+            Descubre los nuevos colores y funcionalidades de tus accesorios
+            favoritos.
+          </p>
+
+          <video
+            autoplay
+            loop
+            muted
+            playsinline
+            class="w-full h-full object-fill"
+          >
+            <source src="/src/assets/logo-servitec-min.mp4" type="video/mp4" />
+            Tu navegador no soporta videos HTML5.
+          </video>
+        </div>
+
+        {products.map((product) => (
+          <AppleStyleProductCard productData={product} />
+        ))}
+      </Carousel>
+</section>

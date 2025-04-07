@@ -1,14 +1,15 @@
+import BocinaTWS from "@assets/products/Bocina_radio_TWS.jpg";
+import FundaiPhone16ProMax from "@assets/products/Funda_iPhone_16_Pro_Max.jpg";
+import Funda_iPhone_16_Pro from "@assets/products/Funda_iPhone_16_Pro.jpg";
+import Funda_iPhone_16 from "@assets/products/Funda_iPhone_16.jpg";
+import Lampara_Decorativa from "@assets/products/Lampara_Decorativa.jpg";
+import Luminarios_de_led from "@assets/products/Luminarios_de_led.jpg";
+import Manguera_expandible from "@assets/products/Manguera_expandible.jpg";
+import Mica_de_camara_iPhone_16_Plus from "@assets/products/Mica_de_camara_iPhone_16_Plus.jpg";
 export const products = [
   {
     id: crypto.randomUUID(),
-    images: {
-      imagenAvif: "/imgs/products/Bocina_radio_TWS-movil.avif",
-      imagenWebp: "/imgs/products/Bocina_radio_TWS-movil.webp",
-      imagenJpg: "/imgs/products/Bocina_radio_TWS-movil.jpg",
-      imagenAvifDesktop: "/imgs/products/Bocina_radio_TWS-desktop.avif",
-      imagenWebpDesktop: "/imgs/products/Bocina_radio_TWS-desktop.webp",
-      imagenJpgDesktop: "/imgs/products/Bocina_radio_TWS-desktop.jpg",
-    },
+    image: BocinaTWS,
     name: "Bocina radio TWS - fm / reproductor",
     price: 340,
     oldPrice: 390,
@@ -16,102 +17,49 @@ export const products = [
 
   {
     id: crypto.randomUUID(),
-    images: {
-      imagenAvif: "/imgs/products/Funda_iPhone_16_Pro_Max-movil.avif",
-      imagenWebp: "/imgs/products/Funda_iPhone_16_Pro_Max-movil.webp",
-      imagenJpg: "/imgs/products/Funda_iPhone_16_Pro_Max-movil.jpg",
-      imagenAvifDesktop: "/imgs/products/Funda_iPhone_16_Pro_Max-desktop.avif",
-      imagenWebpDesktop: "/imgs/products/Funda_iPhone_16_Pro_Max-desktop.webp",
-      imagenJpgDesktop: "/imgs/products/Funda_iPhone_16_Pro_Max-desktop.jpg",
-    },
+    image: FundaiPhone16ProMax,
     name: "Funda iPhone 16 Pro Max Silicon Case",
     price: 185,
     oldPrice: 220,
   },
   {
     id: crypto.randomUUID(),
-    images: {
-      imagenAvif: "/imgs/products/Funda_iPhone_16_Pro-movil.avif",
-      imagenWebp: "/imgs/products/Funda_iPhone_16_Pro-movil.webp",
-      imagenJpg: "/imgs/products/Funda_iPhone_16_Pro-movil.jpg",
-      imagenAvifDesktop: "/imgs/products/Funda_iPhone_16_Pro-desktop.avif",
-      imagenWebpDesktop: "/imgs/products/Funda_iPhone_16_Pro-desktop.webp",
-      imagenJpgDesktop: "/imgs/products/Funda_iPhone_16_Pro-desktop.jpg",
-    },
+    image: Funda_iPhone_16_Pro,
     name: "Funda iPhone 16 Pro Silicon Case",
     price: 185,
     oldPrice: 220,
   },
   {
     id: crypto.randomUUID(),
-    images: {
-      imagenAvif: "/imgs/products/Funda_iPhone_16-movil.avif",
-      imagenWebp: "/imgs/products/Funda_iPhone_16-movil.webp",
-      imagenJpg: "/imgs/products/Funda_iPhone_16-movil.jpg",
-      imagenAvifDesktop: "/imgs/products/Funda_iPhone_16-desktop.avif",
-      imagenWebpDesktop: "/imgs/products/Funda_iPhone_16-desktop.webp",
-      imagenJpgDesktop: "/imgs/products/Funda_iPhone_16-desktop.jpg",
-    },
+    image: Funda_iPhone_16,
     name: "Funda iPhone 16 Silicon Case",
     price: 185,
     oldPrice: 220,
   },
   {
     id: crypto.randomUUID(),
-    images: {
-      imagenAvif: "/imgs/products/Lampara_Decorativa-movil.avif",
-      imagenWebp: "/imgs/products/Lampara_Decorativa-movil.webp",
-      imagenJpg: "/imgs/products/Lampara_Decorativa-movil.jpg",
-      imagenAvifDesktop: "/imgs/products/Lampara_Decorativa-desktop.avif",
-      imagenWebpDesktop: "/imgs/products/Lampara_Decorativa-desktop.webp",
-      imagenJpgDesktop: "/imgs/products/Lampara_Decorativa-desktop.jpg",
-    },
+    image: Lampara_Decorativa,
     name: "Lámpara Decorativa De Escenario Modelo VL-012",
     price: 283,
     oldPrice: 330,
   },
   {
     id: crypto.randomUUID(),
-    images: {
-      imagenAvif: "/imgs/products/Luminarios_de_led-movil.avif",
-      imagenWebp: "/imgs/products/Luminarios_de_led-movil.webp",
-      imagenJpg: "/imgs/products/Luminarios_de_led-movil.jpg",
-      imagenAvifDesktop: "/imgs/products/Luminarios_de_led-desktop.avif",
-      imagenWebpDesktop: "/imgs/products/Luminarios_de_led-desktop.webp",
-      imagenJpgDesktop: "/imgs/products/Luminarios_de_led-desktop.jpg",
-    },
+    image: Luminarios_de_led,
     name: "Luminarios De Led Ultratronic Modelo 28601",
     price: 95,
     oldPrice: 140,
   },
   {
     id: crypto.randomUUID(),
-    images: {
-      imagenAvif: "/imgs/products/Manguera_expandible-movil.avif",
-      imagenWebp: "/imgs/products/Manguera_expandible-movil.webp",
-      imagenJpg: "/imgs/products/Manguera_expandible-movil.jpg",
-      imagenAvifDesktop: "/imgs/products/Manguera_expandible-desktop.avif",
-      imagenWebpDesktop: "/imgs/products/Manguera_expandible-desktop.webp",
-      imagenJpgDesktop: "/imgs/products/Manguera_expandible-desktop.jpg",
-    },
+    image: Manguera_expandible,
     name: "Manguera Expandible Magic Hose 7.5m/25ft",
     price: 135,
     oldPrice: 175,
   },
   {
     id: crypto.randomUUID(),
-    image: "/imgs/products/Mica_de_camara_iPhone_16_Plus.jpg",
-    images: {
-      imagenAvif: "/imgs/products/Mica_de_camara_iPhone_16_Plus-movil.avif",
-      imagenWebp: "/imgs/products/Mica_de_camara_iPhone_16_Plus-movil.webp",
-      imagenJpg: "/imgs/products/Mica_de_camara_iPhone_16_Plus-movil.jpg",
-      imagenAvifDesktop:
-        "/imgs/products/Mica_de_camara_iPhone_16_Plus-desktop.avif",
-      imagenWebpDesktop:
-        "/imgs/products/Mica_de_camara_iPhone_16_Plus-desktop.webp",
-      imagenJpgDesktop:
-        "/imgs/products/Mica_de_camara_iPhone_16_Plus-desktop.jpg",
-    },
+    image: Mica_de_camara_iPhone_16_Plus,
     name: "Mica de cámara iPhone 16/ 16 plus/ 16 Pro/ 16 Pro Max",
     price: 120,
     oldPrice: 160,
