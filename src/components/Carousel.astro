@@ -52,40 +52,24 @@ const { carouselId, class:className } = Astro.props;
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    const $carousel = document.querySelector("[data-carousel]");
-    const btnPrev = document.querySelector("[data-prev]");
-    const btnNext = document.querySelector("[data-next]");
-    if (!$carousel) return;
-    if (btnPrev) {
-      btnPrev.addEventListener("click", () => {
-        $carousel.scrollBy({
-          left: -($carousel as HTMLElement).offsetWidth,
-          behavior: "smooth",
-        });
+    document.querySelectorAll("[data-prev]").forEach((btn) => {
+      btn.addEventListener("click", () => scrollTo((btn as HTMLElement).dataset.prev || "", "prev"));
+    });
+
+    document.querySelectorAll("[data-next]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const carouselId = (btn as HTMLElement).dataset.next || "";
+        scrollTo(carouselId, "next");
       });
-    }
-    if (btnNext) {
-      btnNext.addEventListener("click", () => {
-        $carousel.scrollBy({
-          left: ($carousel as HTMLElement).offsetWidth,
-          behavior: "smooth",
-        });
-      });
+    });
+
+    function scrollTo(carouselId:string, direction:string) {
+      const container = document.querySelector(`[data-carousel='${carouselId}']`);
+      if (!container) return;
+
+      const scrollAmount = container.firstElementChild ? container.firstElementChild.clientWidth + 24 : 0; // Ancho de la tarjeta + gap
+      container.scrollBy({ left: direction === 'next' ? scrollAmount : -scrollAmount });
     }
   });
-  // document.querySelectorAll("[data-prev]").forEach((btn) => {
-  //   btn.addEventListener("click", () => scrollTo(btn.dataset.prev, "prev"));
-  // });
-
-  // document.querySelectorAll("[data-next]").forEach((btn) => {
-  //   btn.addEventListener("click", () => scrollTo(btn.dataset.next, "next"));
-  // });
-
-  // function scrollTo(carouselId:string, direction:string) {
-  //   const container = document.querySelector(`[data-carousel='${carouselId}']`);
-  //   if (!container) return;
-
-  //   const scrollAmount = container.firstElementChild.clientWidth + 24; // Ancho de la tarjeta + gap
-  //   container.scrollBy({ left: direction === 'next' ? scrollAmount : -scrollAmount });
-  // }
+  
 </script>
