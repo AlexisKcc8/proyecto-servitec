@@ -2,23 +2,25 @@
 import ContainerCenter from "@components/ContainerCenter.astro";
 import { Image } from "astro:assets";
 import imgProductsMagSafe from "@assets/banner-magsafe/products-magsafe.png";
+import LinkButton from "@components/LinkButton.astro";
 ---
 <section class="bg-[#f5f5f7] flex justify-center items-center w-full min-h-[70vh]">
       <ContainerCenter class=" flex flex-col text-center laptop:flex-row laptop:text-left">
+
         <aside class="gap-4 flex flex-col justify-center items-center  laptop:w-[50%] laptop:items-start">
-          <h2 class="font-semibold text-4xl tracking-tight leading-10 laptop:text-[5.3rem] laptop:leading-none laptop:w-[100%]">
+          <h2 class="font-semibold text-4xl tracking-tight leading-10 laptop:text-[5rem] text-wrap laptop:leading-none laptop:w-[100%]">
               MagSafe. Combinaciones increíbles.
           </h2>
           <p class="laptop:text-left text-[1.1rem] m-0 laptop:text-[1.4rem]">
-              Añadele una funda, una cartera o un cargador
+              Añadele a tu dispositivo una funda, una cartera o un cargador
               alámbrico/inalámbrico.{" "}
           </p>
-          <!-- <CatalogPhotosButton class="animation-fill-mode: forwards bg-black flex text-white hover:bg-slate-800 text-base sm:text-lg px-6 sm:px-8 py-2 laptop:py-3 rounded-md transition-all duration-300 w-auto">
-              Mirar Productos
-          </CatalogPhotosButton> -->
+          <LinkButton url="https://drive.google.com/file/d/11hThknDbDiQxv5wgVwM1dPBEbYelLlCr/view?usp=drive_links" >
+              🔥 ¡Descubre lo que todos están buscando!
+          </LinkButton>
         </aside>
 
-        <aside class="flex justify-center items-center laptop:w-[50%] ">
+        <aside class="flex justify-center items-center overflow-hidden laptop:w-[50%]">
           <Image
               src={imgProductsMagSafe}
               alt="image Products MagSafe.png"

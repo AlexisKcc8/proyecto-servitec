@@ -1,0 +1,23 @@
+---
+import { Icon } from "astro-icon/components";
+
+// Props que vienen del componente padre
+const { data } = Astro.props;
+
+// Asegúrate de importar el ícono si es un componente React o SVG
+// import Dot from '../components/icons/Dot.jsx'; // ajusta la ruta según tu estructura
+---
+<ul class="text-center flex flex-col items-center justify-center p-4 mb-2 laptop:text-start laptop:items-start laptop:p-0">
+  {data !== null &&
+    data.map((item: any) => {
+      const { id } = item;
+      const text = item.text || item.name;
+      return (
+        <li class="text-sm text-gray-500 flex items-center mb-1">
+          {/* <Dot class="w-4 h-4 inline-block" /> */}
+          <Icon name="check" class="w-4 h-4 inline-block mr-2 prose" />
+          <p>{text}</p>
+        </li>
+      );
+    })}
+</ul>

@@ -1,0 +1,60 @@
+---
+import ContainerCenter from "@components/ContainerCenter.astro";
+import MyListItemsFooter from "@components/MyListItemsFooter.astro";
+import { EquipmentDeliveryPolicy, productsSections, ReturnPolicy, supportSection } from "@data/dataFooter";
+import { ourServices } from "@data/dataInfo";
+
+---
+<footer class="h-full overflow-y-auto flex justify-center items-center">
+  <ContainerCenter >
+      <header class=" flex flex-col items-center laptop:flex-row laptop:justify-between  laptop:gap-8 laptop:overflow-y-hidden">
+       <video
+            autoplay
+            loop
+            muted
+            playsinline
+            class="w-[8rem] h-[8rem] object-cover"
+          >
+            <source src="/src/assets/logo-servitec-min.mp4" type="video/mp4" />
+            Tu navegador no soporta videos HTML5.
+          </video>
+        <div class="laptop:flex">
+          <h2 class="text-center text-black font-semibold mb-2 laptop:mb-0 laptop:mr-4">
+            Síguenos:
+          </h2>
+          <!-- <MySocialsMedia classItemImg=" w-[1.5rem] h-[1.5rem]" /> -->
+        </div>
+      </header>
+
+      <section class="border-y border-y-gray-300 my-4 py-4 gap-4 text-center laptop:grid laptop:grid-cols-3 laptop:text-start">
+        <div>
+          <h2 class="text-lg font-semibold">Productos</h2>
+          <MyListItemsFooter data={productsSections} />
+        </div>
+
+        <div>
+          <h2 class="text-lg font-semibold">Servicios</h2>
+          <MyListItemsFooter data={ourServices} />
+
+          <h2 class="text-lg font-semibold">Soporte</h2>
+          <MyListItemsFooter data={supportSection} />
+        </div>
+        <div>
+          <h2 class="text-lg font-semibold">Politica de devolución.</h2>
+          <MyListItemsFooter data={ReturnPolicy} />
+          
+          <h2 class="text-lg font-semibold">
+            Politica de entrega de equipos.
+          </h2>
+          <MyListItemsFooter data={EquipmentDeliveryPolicy} />
+        </div>
+      </section>
+
+      <footer class="text-center text-gray-500 laptop:flex laptop:justify-between">
+        <h3>
+          Copyright © 2025 Servitec Halachó. Todos los derechos reservados.
+        </h3>
+        <h4 class="my-2">Desarrollado por: Alexis🧢Chim</h4>
+      </footer>
+</ContainerCenter>
+</footer>

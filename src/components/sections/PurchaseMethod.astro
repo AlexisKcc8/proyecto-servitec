@@ -1,5 +1,9 @@
 ---
+import LinkButton from "@components/LinkButton.astro";
 import ContainerCenter from "@components/ContainerCenter.astro";
+import { Image } from "astro:assets";
+import imgAvatar from "@assets/hero/lichos-without-bg.png";
+
 let purchaseMethod = ["Selecciona tu producto.", "Contacta con nosotros por WhatsApp.", "Selecciona el método de pago (efectivo/transferencia).", "Envia el comprobante de pago en caso de ser transferencia.", "Recibe tu producto u obtener en sucursal."];
 ---
 
@@ -33,21 +37,27 @@ let purchaseMethod = ["Selecciona tu producto.", "Contacta con nosotros por What
                 ))
               : null}
           </article>
-           <!-- <CatalogPhotosButton class="bg-black text-white mt-12 ml-4  flex items-center justify-center whitespace-nowrap text-xl font-bold rounded-[15px]  disabled:opacity-100 hover:bg-primary/90 laptop:w-[20rem]">
-              Visualizar Productos
-          </CatalogPhotosButton> -->
+
+          <LinkButton url="https://drive.google.com/file/d/11hThknDbDiQxv5wgVwM1dPBEbYelLlCr/view?usp=drive_links" className="mt-12 ml-4 justify-start">
+              ✨ Tenemos justo lo que estás buscando.
+          </LinkButton>
 
           <p class="mt-2 ml-4 text-sm  text-slate-500">
               Productos originales y de alta calidad.
           </p>
         </aside>
 
-        <aside class="w-[100%] laptop:w-[50%] flex justify-center items-center text-center  laptop:items-start laptop:text-left">
-          <p class="relative text-[20px] text-primary font-semibold max-w-[20rem] leading-tight text-slate-500">
+        <aside class="w-[100%] laptop:w-[50%] flex flex-col justify-center items-center text-center laptop:text-left">
+          <p class="relative text-[20px] text-primary font-semibold max-w-[25rem] leading-tight text-slate-500 prose">
               Alternativamente, en caso de no encontrar el producto deseado en
               nuestro catalogo, puedes preguntar por medio de WhatsApp sin
               ningún compromiso.
           </p>
+          <Image
+              src={imgAvatar}
+              alt="Avatar Servitec"
+              class="object-contain w-[60%] h-full "
+          />
         </aside>
       </section>
 </ContainerCenter>
