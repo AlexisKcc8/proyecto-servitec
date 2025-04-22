@@ -1,0 +1,48 @@
+---
+import ButtonLinkWhatsApp from "@components/ButtonLinkWhatsApp.astro";
+import ContainerCenter from "@components/ContainerCenter.astro";
+import { ourServices } from "@data/dataOurServices";
+import { Image } from "astro:assets";
+
+---
+<section id="OurServices" class="flex flex-col justify-center items-center">
+  <ContainerCenter>
+    <header class="text-center">
+      <h2 class="text-[2rem] font-semibold tracking-tight leading-none laptop:text-[3.8rem]">
+        Nuestros servicios tecnológicos
+      </h2>
+      <h4 class="text-[1.1rem] text-gray-700 laptop:text-[1.5rem] mt-2">
+        El soporte que necesitas, con la calidad que mereces.
+      </h4>
+    </header>
+  </ContainerCenter>
+  {
+    ourServices.map((service, index) => (
+      <div class="w-[100%]  flex justify-center items-center " class:list={{
+        'bg-servitec-graySection': index % 2 === 0, // índice par
+        'bg-white': index % 2 !== 0  // índice impar
+      }}>
+        <ContainerCenter class="h-[100%] flex flex-col items-center justify-center text-center overflow-visible laptop:py-4 "  class:list={{
+        'laptop:flex-row': index % 2 === 0, // índice par
+        'laptop:flex-row-reverse': index % 2 !== 0  // índice impar
+      }}>
+          <aside class="laptop:w-[50%] h-full overflow-visible">
+            <Image
+              src={service.image}
+              alt={`Image of ${service.name}`}
+              class="w-[100%] h-[100%] object-cover object-center "
+            />
+          </aside >
+          <aside class="laptop:w-[50%] flex flex-col items-center justify-center">
+            <span class="text-xl font-semibold bg-gradient-to-r from-sky-500 via-purple-500 to-orange-500 text-transparent bg-clip-text my-4">
+              {service.subtitle}
+            </span>
+            <h4 class="text-[1.5rem] font-semibold laptop:text-5xl">{service.name}</h4>
+            <p class="text-gray-600 text-center my-4 prose laptop:text-[1.2rem]">{service.description}</p>
+            <ButtonLinkWhatsApp className="px-8 py-4" message={service.messageService} title={service.titleBtnAction} />
+          </aside>
+        </ContainerCenter>
+      </div>
+    ))
+  }
+</section>
