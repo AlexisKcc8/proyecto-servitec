@@ -31,9 +31,9 @@ export const ourServices = [
     name: "Reparación de equipos móviles (Android/IOS)",
     subtitle: "Tu celular, como nuevo.",
     description:
-      "Reparamos tu dispositivo móvil con cuidado y precisión, ya sea por una pantalla rota, problemas de batería u otros fallos, para que puedas disfrutarlo como nuevo nuevamente.",
+      "Reparamos tu dispositivo móvil con cuidado y precisión, ya sea por una pantalla rota, problemas de batería u otros fallos, para que puedas disfrutarlo como nuevo.",
     image: phone,
-    titleBtnAction: "📱🔄 ¡Renueva tu móvil con nosotros!",
+    titleBtnAction: "📱¡Renueva tu móvil con nosotros!",
     messageService:
       "Hola Servitec, necesito reparar mi celular (Android/iOS). ¿Podrían decirme cómo funciona el servicio y qué necesito llevar?",
   },
