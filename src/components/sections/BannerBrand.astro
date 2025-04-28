@@ -1,32 +1,47 @@
 ---
 
 import ContainerCenter from "@components/ContainerCenter.astro"
-import {productsBrands} from "@data/dataInfo"
-import { Image } from "astro:assets"
-
+// import {productsBrands} from "@data/dataInfo"
+import { Icon } from "astro-icon/components"
+// import { Image } from "astro:assets"
+const iconBrands = ["elegate", "ios", "kingston-3", "moreka", "motorola", "samsung", "stylos", "tplink"]
 ---
 
-<section class="flex items-center w-full justify-center px-6 laptop:px-0 ">
-  <ContainerCenter class="flex flex-col justify-center items-center laptop:flex-row">
-      <header>
-        <h2 class="font-semibold text-xl text-gray-700 opacity-30 laptop:mr-8">
-          Nuestras marcas:
-        </h2>
-      </header>
-      <div class="flex items-center justify-center gap-4 laptop:gap-4 flex-wrap">
-        {productsBrands !== null
-          ? productsBrands.map((brand) => (
-              <div
-                class="w-[5.5rem] h-[5.5rem]"
-              >
-                 <Image
-                  class=" w-[100%] h-[100%] object-contain opacity-20 hover:scale-105 "
-                  src={brand.urlBrand}
-                 alt={`logo-${brand.name}`}
-                />
-              </div>
-            ))
-          : null}
+<div
+  class="flex items-center w-full justify-center px-6 laptop:px-0 "
+>
+  <ContainerCenter class="flex w-full h-fit rounded-xl">
+    <div class="relative overflow-hidden flex">
+      <!-- Fade izquierdo -->
+      <div class="pointer-events-none absolute left-0 top-0 h-full w-10 bg-gradient-to-r from-white via-white/80 to-transparent z-10"></div>
+
+      <!-- Fade derecho -->
+      <div class="pointer-events-none absolute right-0 top-0 h-full w-10 bg-gradient-to-l from-white via-white/80 to-transparent z-10"></div>
+
+      <div class="flex gap-5 pr-5 group flex-[0_0_100%]">
+        {
+          iconBrands.map((icon) => (
+            <div class="w-full h-full justify-center items-center">
+              <Icon
+                name={icon}
+                class="w-[7rem] h-[7rem] justify-center items-center"
+              />
+            </div>
+          ))
+        }
       </div>
-</ContainerCenter>
-</section>
+      <div aria-hidden class="flex gap-5 pr-5 group flex-[0_0_100%]">
+        {
+          iconBrands.map((icon) => (
+            <div class="w-full h-full justify-center items-center">
+              <Icon
+                name={icon}
+                class="w-[7rem] h-[7rem] justify-center items-center"
+              />
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </ContainerCenter>
+</div>

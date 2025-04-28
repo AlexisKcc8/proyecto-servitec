@@ -21,56 +21,56 @@ export const purchaseMethod = [
   },
 ];
 //--------------------------------------------------------------------------
-import brandKingtons from "@assets/Brands/logo-kingston.svg";
-import brandElegate from "@assets/Brands/logo-elegate.svg";
-import brandIos from "@assets/Brands/logo-ios.svg";
-import brandMoreka from "@assets/Brands/logo-moreka.svg";
-import brandMotorola from "@assets/Brands/logo-motorola.svg";
-import brandSamsung from "@assets/Brands/logo-samsung.svg";
-import brandStylos from "@assets/Brands/logo-stylos.svg";
-import brandTplink from "@assets/Brands/logo-tplink.svg";
-export const productsBrands = [
-  {
-    id: crypto.randomUUID(),
-    name: "kingtons",
-    urlBrand: brandKingtons,
-  },
-  {
-    id: crypto.randomUUID(),
-    name: "elegate",
-    urlBrand: brandElegate,
-  },
-  {
-    id: crypto.randomUUID(),
-    name: "ios",
-    urlBrand: brandIos,
-  },
-  {
-    id: crypto.randomUUID(),
-    name: "moreka",
-    urlBrand: brandMoreka,
-  },
-  {
-    id: crypto.randomUUID(),
-    name: "motorola",
-    urlBrand: brandMotorola,
-  },
-  {
-    id: crypto.randomUUID(),
-    name: "samsung",
-    urlBrand: brandSamsung,
-  },
-  {
-    id: crypto.randomUUID(),
-    name: "stylos",
-    urlBrand: brandStylos,
-  },
-  {
-    id: crypto.randomUUID(),
-    name: "tpLink",
-    urlBrand: brandTplink,
-  },
-];
+// import brandKingtons from "@assets/Brands/logo-kingston.svg";
+// import brandElegate from "@assets/Brands/logo-elegate.svg";
+// import brandIos from "@assets/Brands/logo-ios.svg";
+// import brandMoreka from "@assets/Brands/logo-moreka.svg";
+// import brandMotorola from "@assets/Brands/logo-motorola.svg";
+// import brandSamsung from "@assets/Brands/logo-samsung.svg";
+// import brandStylos from "@assets/Brands/logo-stylos.svg";
+// import brandTplink from "@assets/Brands/logo-tplink.svg";
+// export const productsBrands = [
+//   {
+//     id: crypto.randomUUID(),
+//     name: "kingtons",
+//     urlBrand: brandKingtons,
+//   },
+//   {
+//     id: crypto.randomUUID(),
+//     name: "elegate",
+//     urlBrand: brandElegate,
+//   },
+//   {
+//     id: crypto.randomUUID(),
+//     name: "ios",
+//     urlBrand: brandIos,
+//   },
+//   {
+//     id: crypto.randomUUID(),
+//     name: "moreka",
+//     urlBrand: brandMoreka,
+//   },
+//   {
+//     id: crypto.randomUUID(),
+//     name: "motorola",
+//     urlBrand: brandMotorola,
+//   },
+//   {
+//     id: crypto.randomUUID(),
+//     name: "samsung",
+//     urlBrand: brandSamsung,
+//   },
+//   {
+//     id: crypto.randomUUID(),
+//     name: "stylos",
+//     urlBrand: brandStylos,
+//   },
+//   {
+//     id: crypto.randomUUID(),
+//     name: "tpLink",
+//     urlBrand: brandTplink,
+//   },
+// ];
 //--------------------------------------------------------------------------
 
 import logoVisa from "@assets/credit-cards-mercado-pago/visa-logo.svg";
