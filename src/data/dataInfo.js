@@ -81,7 +81,6 @@ import logoUpsi from "@assets/credit-cards/Up-si-vale-logo.svg";
 import logoToka from "@assets/credit-cards/Toka-logo.svg";
 import logoTengo from "@assets/credit-cards/tengo-logo.svg";
 import logoPluxee from "@assets/credit-cards/pluxee-logo.svg";
-import logoEndered from "@assets/credit-cards/Endered-logo.svg";
 export const creditCardsMercadoPago = [
   {
     id: "crypto.randomUUID()",
@@ -122,11 +121,6 @@ export const creditCardsMercadoPago = [
     id: "crypto.randomUUID()",
     name: "Pluxee",
     image: logoPluxee,
-  },
-  {
-    id: "crypto.randomUUID()",
-    name: "Endered",
-    image: logoEndered,
   },
 ];
 
