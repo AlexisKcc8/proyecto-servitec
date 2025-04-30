@@ -73,15 +73,15 @@ export const purchaseMethod = [
 // ];
 //--------------------------------------------------------------------------
 
-import logoVisa from "@assets/credit-cards-mercado-pago/visa-logo.svg";
-import logoMastercard from "@assets/credit-cards-mercado-pago/mastercard-logo.svg";
-import logoAmex from "@assets/credit-cards-mercado-pago/amex-logo.svg";
-import logoCarnet from "@assets/credit-cards-mercado-pago/carnet-logo.svg";
-import logoUpsi from "@assets/credit-cards-mercado-pago/Up-si-vale-logo.svg";
-import logoToka from "@assets/credit-cards-mercado-pago/Toka-logo.svg";
-import logoTengo from "@assets/credit-cards-mercado-pago/tengo-logo.svg";
-import logoPluxee from "@assets/credit-cards-mercado-pago/pluxee-logo.svg";
-import logoEndered from "@assets/credit-cards-mercado-pago/Endered-logo.svg";
+import logoVisa from "@assets/credit-cards/visa-logo.svg";
+import logoMastercard from "@assets/credit-cards/mastercard-logo.svg";
+import logoAmex from "@assets/credit-cards/amex-logo.svg";
+import logoCarnet from "@assets/credit-cards/carnet-logo.svg";
+import logoUpsi from "@assets/credit-cards/Up-si-vale-logo.svg";
+import logoToka from "@assets/credit-cards/Toka-logo.svg";
+import logoTengo from "@assets/credit-cards/tengo-logo.svg";
+import logoPluxee from "@assets/credit-cards/pluxee-logo.svg";
+// import logoEndered from "@assets/credit-cards/Endered-logo.svg";
 export const creditCardsMercadoPago = [
   {
     id: "crypto.randomUUID()",
@@ -123,11 +123,11 @@ export const creditCardsMercadoPago = [
     name: "Pluxee",
     image: logoPluxee,
   },
-  {
-    id: "crypto.randomUUID()",
-    name: "Endered",
-    image: logoEndered,
-  },
+  // {
+  //   id: "crypto.randomUUID()",
+  //   name: "Endered",
+  //   image: logoEndered,
+  // },
 ];
 
 import LogoTelcel from "@assets/phone-companies/telcel-logo.svg";
