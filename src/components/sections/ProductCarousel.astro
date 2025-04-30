@@ -1,6 +1,7 @@
 ---
 import Carousel from "@components/Carousel.astro"
 import AppleStyleProductCard from "@components/AppleStyleProductCard.astro"
+import logoServitec from "@assets/videos/logo-servitec-min.mp4"
 import { products } from "@data/dataProducts"
 ---
 <section class="text-center my-4">
@@ -31,7 +32,7 @@ import { products } from "@data/dataProducts"
             playsinline
             class="w-full h-full object-fill"
           >
-            <source src="/src/assets/logo-servitec-min.mp4" type="video/mp4" />
+            <source src={logoServitec} type="video/mp4" />
             Tu navegador no soporta videos HTML5.
           </video>
         </div>

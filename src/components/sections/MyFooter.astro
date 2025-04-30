@@ -4,6 +4,7 @@ import MyListItemsFooter from "@components/MyListItemsFooter.astro";
 import MySocialsMedia from "@components/MySocialsMedia.astro";
 import { EquipmentDeliveryPolicy, productsSections, ReturnPolicy, supportSection } from "@data/dataFooter";
 import { ourServices } from "@data/dataOurServices";
+import logoServitec from "@assets/videos/logo-servitec-min.mp4"
 
 ---
 <footer class="h-full overflow-y-auto flex justify-center items-center">
@@ -16,7 +17,7 @@ import { ourServices } from "@data/dataOurServices";
             playsinline
             class="w-[8rem] h-[8rem] object-cover"
           >
-            <source src="/src/assets/logo-servitec-min.mp4" type="video/mp4" />
+            <source src={logoServitec} type="video/mp4" />
             Tu navegador no soporta videos HTML5.
           </video>
         <div class="laptop:flex">
