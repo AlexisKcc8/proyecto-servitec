@@ -17,7 +17,7 @@ import { products } from "@data/dataProducts"
       <Carousel carouselId="product-carousel">
         <div
          
-          class="relative card-product w-[20rem] text-start p-4 flex flex-col snap-center flex-shrink-0 rounded-lg border border-servitect-700 overflow-hidden hover:cursor-pointer hover:ease-in"
+          class="relative card-product w-[20rem] text-start p-4 flex flex-col snap-center flex-shrink-0 rounded-lg border border-servitect-700 overflow-hidden hover:cursor-pointer hover:ease-in will-change-[transform]"
         >
           <h2 class="font-semibold text-3xl mt-4">Ponte a la moda</h2>
           <p class="text-lg tracking-wide">
@@ -27,10 +27,11 @@ import { products } from "@data/dataProducts"
 
           <video
             autoplay
-            loop
             muted
+            loop
             playsinline
-            class="w-full h-full object-fill border-none overflow-hidden z-[-10] pointer-events-none"
+            preload="metadata"
+            class="w-full h-full object-cover z-[-10] pointer-events-none will-change-[transform]"
           >
             <source src={logoServitec} type="video/mp4" />
             Tu navegador no soporta videos HTML5.
