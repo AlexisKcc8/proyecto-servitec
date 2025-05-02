@@ -25,18 +25,20 @@ import { products } from "@data/dataProducts"
             favoritos.
           </p>
 
-          <video
+          <picture class="w-[18rem] h-[25rem] border-none outline-none z-[-10] overflow-hidden">
+            <video
             autoplay
             muted
             loop
             playsinline
             preload="metadata"
-            class="w-full h-full object-cover z-[-10] pointer-events-none will-change-[transform] bg-transparent border-none outline-none"
+            class="w-full h-full object-cover pointer-events-none will-change-[transform] bg-transparent border-none outline-none"
             style="transform: translateZ(0);"
           >
             <source class="border-none outline-none" src={logoServitec} type="video/mp4" />
             Tu navegador no soporta videos HTML5.
           </video>
+          </picture>
         </div>
 
         {products.map((product) => (
