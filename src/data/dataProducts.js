@@ -1,11 +1,11 @@
-import BocinaTWS from "@assets/products/Bocina_radio_TWS.jpg";
-import FundaiPhone16ProMax from "@assets/products/Funda_iPhone_16_Pro_Max.jpg";
-import Funda_iPhone_16_Pro from "@assets/products/Funda_iPhone_16_Pro.jpg";
-import Funda_iPhone_16 from "@assets/products/Funda_iPhone_16.jpg";
-import Lampara_Decorativa from "@assets/products/Lampara_Decorativa.jpg";
-import Luminarios_de_led from "@assets/products/Luminarios_de_led.jpg";
-import Manguera_expandible from "@assets/products/Manguera_expandible.jpg";
-import Mica_de_camara_iPhone_16_Plus from "@assets/products/Mica_de_camara_iPhone_16_Plus.jpg";
+import BocinaTWS from "@assets/products/Bocina_radio_TWS.avif";
+import FundaiPhone16ProMax from "@assets/products/Funda_iPhone_16_Pro_Max.avif";
+import Funda_iPhone_16_Pro from "@assets/products/Funda_iPhone_16_Pro.avif";
+import Funda_iPhone_16 from "@assets/products/Funda_iPhone_16.avif";
+import Lampara_Decorativa from "@assets/products/Lampara_Decorativa.avif";
+import Luminarios_de_led from "@assets/products/Luminarios_de_led.avif";
+import Manguera_expandible from "@assets/products/Manguera_expandible.avif";
+import Mica_de_camara_iPhone_16_Plus from "@assets/products/Mica_de_camara_iPhone_16_Plus.avif";
 export const products = [
   {
     id: crypto.randomUUID(),

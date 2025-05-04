@@ -1,8 +1,9 @@
 ---
 import Carousel from "@components/Carousel.astro"
 import AppleStyleProductCard from "@components/AppleStyleProductCard.astro"
-import logoServitec from "@assets/videos/logo-servitec-min.mp4"
+import GirlShoppingCartCover from "@assets/products/Girl-Shopping-Cart-cover.avif"
 import { products } from "@data/dataProducts"
+import { Image } from "astro:assets"
 ---
 <section class="text-center my-4">
       <header class="text-start laptop:w-[80%] m-auto px-5 laptop:p-0">
@@ -16,29 +17,20 @@ import { products } from "@data/dataProducts"
 
       <Carousel carouselId="product-carousel">
         <div
-         
-          class="relative card-product w-[20rem] text-start p-4 flex flex-col snap-center flex-shrink-0 overflow-hidden hover:cursor-pointer will-change-[transform]"
+          class="relative card-product w-96 text-start flex flex-col snap-center flex-shrink-0 overflow-hidden hover:cursor-pointer will-change-[transform]"
         >
-          <h2 class="font-semibold text-3xl mt-4">Ponte a la moda</h2>
-          <p class="text-lg tracking-wide">
-            Descubre los nuevos colores y funcionalidades de tus accesorios
-            favoritos.
-          </p>
-
-          <picture class="w-[18rem] h-[25rem] border-none outline-none z-[-10] overflow-hidden">
-            <video
-            autoplay
-            muted
-            loop
-            playsinline
-            preload="metadata"
-            class="w-full h-full object-cover pointer-events-none will-change-[transform] bg-transparent border-none outline-none"
-            style="transform: translateZ(0);"
-          >
-            <source class="border-none outline-none" src={logoServitec} type="video/mp4" />
-            Tu navegador no soporta videos HTML5.
-          </video>
-          </picture>
+          <div class="p-4">
+            <h2 class="font-bold text-3xl mt-4">Ponte a la moda</h2>
+            <p class="text-xl tracking-wide text-gray-700">
+              Descubre los nuevos colores, funcionalidades y adquiere tus accesorios
+              favoritos en servitec halachó.
+            </p>
+          </div>
+          <Image
+              src={GirlShoppingCartCover}
+              alt="logo Servitec"
+              class="object-cover w-full h-full aspect-square mt-10 "
+          />
         </div>
 
         {products.map((product) => (
