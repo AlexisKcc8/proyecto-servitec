@@ -1,40 +1,43 @@
 ---
-import Carousel from "@components/Carousel.astro"
-import AppleStyleProductCard from "@components/AppleStyleProductCard.astro"
-import GirlShoppingCartCover from "@assets/products/Girl-Shopping-Cart-cover.avif"
-import { products } from "@data/dataProducts"
-import { Image } from "astro:assets"
+import Carousel from "@components/Carousel.astro";
+import AppleStyleProductCard from "@components/AppleStyleProductCard.astro";
+import GirlShoppingCartCover from "@assets/products/Girl-Shopping-Cart-cover.avif";
+import { products } from "@data/dataProducts";
+import { Image } from "astro:assets";
 ---
+
 <section class="text-center my-4">
-      <header class="text-start laptop:w-[80%] m-auto px-5 laptop:p-0">
-        <h2 class=" animate-fill-forwards text-[2rem] font-semibold tracking-tight leading-none laptop:text-[3.5rem]">
-            Nuestros productos más vendidos
-          </h2>
-        <h4 class="text-[1.1rem] text-gray-700 laptop:text-[1.5rem]">
-            Adquiere calidad a precios top.
-        </h4>
-      </header>
+  <header class="text-start laptop:w-4/5 m-auto px-5 laptop:p-0">
+    <h2
+      class="animate-fill-forwards text-4xl font-semibold tracking-tight leading-none laptop:text-6xl"
+      data-aos="fade"
+    >
+      Nuestros productos más vendidos
+    </h2>
+    <h4 class="text-xl text-gray-700 laptop:text-2xl" data-aos="fade">
+      Adquiere calidad a precios top.
+    </h4>
+  </header>
 
-      <Carousel carouselId="product-carousel">
-        <div
-          class="relative w-80 card-product  text-start flex flex-col snap-center flex-shrink-0 overflow-hidden hover:cursor-pointer will-change-[transform] laptop:w-96"
-        >
-          <div class="p-4">
-            <h2 class="font-bold text-3xl mt-4">Ponte a la moda</h2>
-            <p class="text-xl tracking-wide text-gray-700">
-              Descubre los nuevos colores, funcionalidades y adquiere tus accesorios
-              favoritos en servitec halachó.
-            </p>
-          </div>
-          <Image
-              src={GirlShoppingCartCover}
-              alt="logo Servitec"
-              class="object-cover w-full h-full aspect-square mt-10 "
-          />
-        </div>
+  <Carousel carouselId="product-carousel">
+    <div
+      class="relative w-80 card-product text-start flex flex-col snap-center flex-shrink-0 overflow-hidden hover:cursor-pointer will-change-[transform] laptop:w-96"
+      data-aos="fade-up"
+    >
+      <div class="p-4">
+        <h2 class="font-bold text-3xl mt-4">Ponte a la moda</h2>
+        <p class="text-xl tracking-wide text-gray-700">
+          Descubre los nuevos colores, funcionalidades y adquiere tus accesorios
+          favoritos en servitec halachó.
+        </p>
+      </div>
+      <Image
+        src={GirlShoppingCartCover}
+        alt="logo Servitec"
+        class="object-cover w-full h-full aspect-square mt-10"
+      />
+    </div>
 
-        {products.map((product) => (
-          <AppleStyleProductCard productData={product} />
-        ))}
-      </Carousel>
+    {products.map((product) => <AppleStyleProductCard productData={product} />)}
+  </Carousel>
 </section>
