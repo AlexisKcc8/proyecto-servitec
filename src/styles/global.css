@@ -40,6 +40,23 @@ html {
   scroll-behavior: smooth;
 }
 
+.title-hero {
+  transform: translateY(0.5rem);
+  animation: slideFade 0.5s ease-out forwards;
+}
+
+@keyframes slideFade {
+  0% {
+    opacity: 1;
+    transform: translateY(1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 body {
   font-family: "Figtree", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif,
     Courier;
