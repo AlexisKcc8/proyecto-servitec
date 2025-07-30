@@ -1,48 +1,36 @@
-# Astro Starter Kit: Basics
+# 🚀 Servitec Halachó
 
-```sh
-npm create astro@latest -- --template basics
-```
+**Tu aliado confiable en tecnología y soluciones electrónicas**
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+En **Servitec Halachó** encontrarás todo lo que necesitas en tecnología: venta de productos electrónicos especializados para iPhone, dispositivos electrónicos, servicios técnicos, instalación de cámaras de seguridad, mantenimiento de equipos de cómputo y mucho más. Nuestro objetivo es ofrecer soluciones accesibles, rápidas y de alta calidad a nuestra comunidad.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+---
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+## 🧩 Características del proyecto
 
-## 🚀 Project Structure
+- 🛒 Catálogo digital de productos electrónicos
+- 📱 Accesorios especializados para iPhone
+- 💻 Servicios de mantenimiento y reparación de computadoras
+- 📹 Instalación de cámaras de seguridad (CCTV)
+- 🔧 Atención técnica personalizada
+- 🌐 Diseño responsive y optimizado para móviles
 
-Inside of your Astro project, you'll see the following folders and files:
+---
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## 🛠️ Tecnologías utilizadas
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+- **Astro** – Framework moderno para construir sitios rápidos y estáticos
+- **Tailwind CSS** – Utilidad de estilos para un diseño limpio y responsive
+- **TypeScript** – Seguridad en tiempo de desarrollo
+- **Icons (astro-icon, Lucide, Boxicons)** – Iconografía profesional
+- **Deploy en Vercel/Netlify** – Hosting rápido y confiable
 
-## 🧞 Commands
+---
 
-All commands are run from the root of the project, from a terminal:
+## 📸 Vista previa
+<img width="500" height="985" alt="LandingPage-Servitec-Halacho" src="https://github.com/user-attachments/assets/565be71d-c898-40ca-8dc3-92e8661a3bcb" />
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+---
 
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## 🌍 Enlace en producción
+👉 [servitec-halacho.netlify.app](https://servitec-halacho.netlify.app/)
