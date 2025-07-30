@@ -7,6 +7,7 @@ import LinkButton from "@components/LinkButton.astro";
 
 <section
   class="min-h-screen bg-servitec-graySection flex justify-center items-center w-full h-dvh"
+  aria-labelledby="magsafe-title"
 >
   <ContainerCenter
     class="flex flex-col text-center laptop:flex-row laptop:text-left"
@@ -15,14 +16,18 @@ import LinkButton from "@components/LinkButton.astro";
       class="gap-4 flex flex-col justify-center items-center laptop:w-1/2 laptop:items-start"
     >
       <h2
-        class="font-semibold text-4xl tracking-tight leading-10 laptop:text-[5rem] text-wrap laptop:leading-none laptop:w-full"
+        id="magsafe-title"
+        class="font-semibold text-4xl tracking-tight leading-10 laptop:text-[5rem] text-wrap laptop:leading-none laptop:w-full text-black"
         data-aos="fade"
       >
         MagSafe. Combinaciones increíbles.
       </h2>
-      <p class="laptop:text-left text-xl m-0 laptop:text-2xl" data-aos="fade">
-        Añadele a tu dispositivo una funda, una cartera o un cargador
-        alámbrico/inalámbrico.{" "}
+      <p
+        class="laptop:text-left text-xl m-0 laptop:text-2xl text-gray-800"
+        data-aos="fade"
+      >
+        Añádele a tu dispositivo una funda, una cartera o un cargador
+        alámbrico/inalámbrico.
       </p>
       <LinkButton
         url="https://drive.google.com/file/d/11hThknDbDiQxv5wgVwM1dPBEbYelLlCr/view?usp=drive_links"
@@ -37,8 +42,9 @@ import LinkButton from "@components/LinkButton.astro";
     >
       <Image
         src={imgProductsMagSafe}
-        alt="image Products MagSafe.png"
-        class="w-full h-full overflow-hidden object-cover laptop:w-full laptop:h-full"
+        alt="Productos MagSafe como fundas, carteras y cargadores"
+        class="w-full h-full object-contain"
+        loading="lazy"
       />
     </aside>
   </ContainerCenter>

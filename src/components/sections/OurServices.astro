@@ -8,46 +8,66 @@ import { Image } from "astro:assets";
 <section
   id="OurServices"
   class="min-h-screen flex flex-col justify-center items-center bg-servitec-graySection"
+  aria-labelledby="our-services-title"
+  role="region"
 >
   <ContainerCenter>
-    <header class="text-center">
+    <header class="text-center max-w-5xl mx-auto px-4">
       <h2
+        id="our-services-title"
         class="text-4xl font-semibold tracking-tight leading-none laptop:text-6xl"
         data-aos="fade"
       >
         Nuestros servicios tecnológicos
       </h2>
-      <h4 class="text-xl text-gray-700 laptop:text-2xl mt-2" data-aos="fade">
+      <p
+        class="text-xl text-gray-700 laptop:text-2xl mt-2"
+        data-aos="fade"
+        aria-describedby="services-subtitle"
+      >
         El soporte que necesitas, con la calidad que mereces.
-      </h4>
+      </p>
     </header>
   </ContainerCenter>
+
   {
     ourServices.map((service, index) => (
-      <div
-        class="relative w-[90%]  flex justify-center items-center mb-8"
+      <article
+        id={service.name}
+        class="relative w-[90%] flex justify-center items-center mb-12"
         data-aos="fade"
+        aria-labelledby={`service-title-${index}`}
+        role="group"
       >
         <ContainerCenter
-          class="h-full bg-white rounded-2xl flex flex-col items-center justify-center text-center overflow-visible laptop:py-4 "
+          class="h-full bg-white rounded-2xl flex flex-col items-center justify-center text-center overflow-visible laptop:py-6 gap-4"
           class:list={{
-            "laptop:flex-row": index % 2 === 0, // índice par
-            "laptop:flex-row-reverse": index % 2 !== 0, // índice impar
+            "laptop:flex-row": index % 2 === 0,
+            "laptop:flex-row-reverse": index % 2 !== 0,
           }}
         >
-          <aside class="laptop:w-1/2 h-full overflow-visible">
+          <figure class="laptop:w-1/2 h-full overflow-visible">
             <Image
               src={service.image}
-              alt={`Image of ${service.name}`}
-              class="w-full h-full object-cover object-center "
+              alt={`Imagen ilustrativa del servicio: ${service.name}`}
+              class="w-full h-full object-cover object-center rounded-xl"
+              loading="lazy"
             />
-          </aside>
-          <aside class="laptop:w-1/2 flex flex-col items-center justify-center">
+          </figure>
+
+          <div class="laptop:w-1/2 flex flex-col items-center justify-center p-4 text-center">
             <span class="text-xl font-semibold bg-gradient-to-r from-sky-500 via-purple-500 to-orange-500 text-transparent bg-clip-text mt-4">
               {service.subtitle}
             </span>
-            <h4 class="text-3xl font-bold laptop:text-5xl">{service.name}</h4>
-            <p class="text-gray-600 text-center my-4 prose laptop:text-xl">
+
+            <h3
+              id={`service-title-${index}`}
+              class="text-3xl font-bold laptop:text-5xl mt-2"
+            >
+              {service.name}
+            </h3>
+
+            <p class="text-gray-600 my-4 laptop:text-xl max-w-xl">
               {service.description}
             </p>
 
@@ -56,9 +76,9 @@ import { Image } from "astro:assets";
               message={service.messageService}
               title={service.titleBtnAction}
             />
-          </aside>
+          </div>
         </ContainerCenter>
-      </div>
+      </article>
     ))
   }
 </section>

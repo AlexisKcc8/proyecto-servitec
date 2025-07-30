@@ -1,47 +1,56 @@
 ---
+// VideoFrame.astro
 const { videoSrc, thumbnailSrc } = Astro.props;
 import VideoPlayerScript from "./VideoPlayerScript.ts";
 ---
 
-<div id="video-container" class="relative w-full h-screen bg-[#f5f5f7]">
+<div
+  id="video-container"
+  class="relative w-full h-screen bg-[#f5f5f7]"
+  role="region"
+  aria-labelledby="video-section-title"
+>
+  <h2 id="video-section-title" class="sr-only">Video de presentación</h2>
+
   <div class="w-full h-full flex justify-center items-center" data-aos="fade">
     <div
       id="video-wrapper"
-      class="relative bg-black aspect-[16/9] w-[95%] h-[100%] rounded-[4rem] p-[1rem] bg-gradient-to-tr from-sky-300 via-pink-400 to-green-200 shadow-[0_0_24px_rgba(255,192,203,0.4)]"
+      class="relative bg-black aspect-[16/9] w-[95%] h-full rounded-[4rem] p-[1rem] bg-gradient-to-tr from-sky-300 via-pink-400 to-green-200 shadow-[0_0_24px_rgba(255,192,203,0.4)]"
     >
-      {/* Botones de volumen (izquierda) */}
+      <!-- Botones de volumen decorativos -->
       <div
         class="absolute -left-[.2rem] top-[10rem] laptop:top-auto h-[4rem] w-[.5rem] rounded-full bg-gradient-to-tr from-sky-300 via-pink-400 to-green-200 shadow-md
-      laptop:-bottom-[.2rem] z-50 laptop:left-[15rem] laptop:w-[4rem] laptop:h-[.5rem]"
+        laptop:-bottom-[.2rem] z-50 laptop:left-[15rem] laptop:w-[4rem] laptop:h-[.5rem]"
+        aria-hidden="true"
       >
       </div>
 
       <div
         class="absolute -left-[.2rem] top-[15rem] laptop:top-auto h-[4rem] w-[.5rem] rounded-full bg-gradient-to-tr from-sky-300 via-pink-400 to-green-200 shadow-md
-      laptop:-bottom-[.2rem] z-50 laptop:left-[22rem] laptop:w-[4rem] laptop:h-[.5rem]"
+        laptop:-bottom-[.2rem] z-50 laptop:left-[22rem] laptop:w-[4rem] laptop:h-[.5rem]"
+        aria-hidden="true"
       >
       </div>
 
-      {/* Botón de encendido (derecha) */}
       <div
         class="absolute -right-[.2rem] top-[18rem] h-[4rem] w-[.5rem] rounded-full bg-gradient-to-tr from-sky-300 via-pink-400 to-green-200 shadow-md laptop:left-[25rem] laptop:-top-[.2rem] laptop:w-[4rem] laptop:h-[.5rem]"
+        aria-hidden="true"
       >
       </div>
 
+      <!-- Pantalla principal del dispositivo -->
       <div
         class="relative w-full h-full aspect-[16/9] border-[1rem] rounded-[3rem] overflow-hidden"
       >
-        <!-- Cámara frontal (lado izquierdo) -->
+        <!-- Cámara y bocina -->
         <div
           class="absolute transform top-4 left-1/2 -translate-x-1/2 w-[8rem] h-[2.5rem] rounded-2xl laptop:left-8 laptop:top-1/2 laptop:-translate-y-1/2 laptop:w-[3rem] laptop:h-[10rem] laptop:rounded-2xl bg-black z-50 flex items-center justify-center laptop:flex-col-reverse"
+          aria-hidden="true"
         >
-          <!-- Bocina (línea delgada) -->
           <div
             class="w-16 h-2 bg-gray-600 rounded-full opacity-70 mr-2 laptop:w-3 laptop:h-16 laptop:mr-0 laptop:mt-2"
           >
           </div>
-
-          <!-- Cámara brillante -->
           <div
             class="w-2 h-2 rounded-full bg-gradient-to-br from-blue-500 via-cyan-400 to-white shadow-md border border-white/40 animate-pulse"
           >
@@ -57,13 +66,16 @@ import VideoPlayerScript from "./VideoPlayerScript.ts";
           loop
           muted
           playsinline
-          preload="none"></video>
+          preload="metadata"
+          tabindex="-1"
+          aria-hidden="true"></video>
 
         <!-- Botón de reproducción -->
         <button
           id="video-toggle"
-          class="absolute right-4 bottom-4 bg-white/80 text-black rounded-full p-2 hover:bg-white transition z-20"
-          aria-label="Play/Pause"
+          class="absolute right-4 bottom-4 bg-white/80 text-black rounded-full p-2 hover:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 transition z-20"
+          aria-label="Reproducir o pausar el video"
+          aria-pressed="false"
         >
           ▶️
         </button>

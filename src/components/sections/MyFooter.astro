@@ -12,10 +12,14 @@ import { ourServices } from "@data/dataOurServices";
 import logoServitec from "@assets/videos/logo-servitec-min.mp4";
 ---
 
-<footer class="min-h-screen overflow-y-auto flex justify-center items-center">
+<footer
+  class="min-h-screen overflow-y-auto flex justify-center items-center"
+  role="contentinfo"
+>
   <ContainerCenter>
     <header
       class="flex flex-col items-center laptop:flex-row laptop:justify-between laptop:gap-8 laptop:overflow-y-hidden"
+      aria-label="Logo y redes sociales"
     >
       <video
         autoplay
@@ -23,51 +27,57 @@ import logoServitec from "@assets/videos/logo-servitec-min.mp4";
         muted
         playsinline
         class="w-[8rem] h-[8rem] object-cover"
+        aria-label="Logo animado de Servitec"
       >
         <source src={logoServitec} type="video/mp4" />
-        Tu navegador no soporta videos HTML5.
+        <p>
+          Tu navegador no soporta videos HTML5. Aquí debería ir el logo de
+          Servitec.
+        </p>
       </video>
-      <div class="laptop:flex">
+      <div class="laptop:flex items-center">
         <h2
           class="text-center text-black font-semibold mb-2 laptop:mb-0 laptop:mr-4"
         >
           Síguenos:
         </h2>
-        <MySocialsMedia classItemImg=" w-[1.5rem] h-[1.5rem]" />
+        <MySocialsMedia classItemImg="w-[1.5rem] h-[1.5rem]" />
       </div>
     </header>
 
-    <section
+    <nav
       class="border-y border-y-gray-300 my-4 py-4 gap-4 text-center laptop:grid laptop:grid-cols-3 laptop:text-start"
+      aria-label="Navegación del sitio"
     >
       <div>
-        <h2 class="text-lg font-semibold">Productos</h2>
+        <h2 class="text-lg font-semibold text-black">Productos</h2>
         <MyListItemsFooter data={productsSections} />
       </div>
 
       <div>
-        <h2 class="text-lg font-semibold">Servicios</h2>
+        <h2 class="text-lg font-semibold text-black">Servicios</h2>
         <MyListItemsFooter data={ourServices} />
 
-        <h2 class="text-lg font-semibold">Soporte</h2>
+        <h2 class="text-lg font-semibold text-black mt-4">Soporte</h2>
         <MyListItemsFooter data={supportSection} />
       </div>
+
       <div>
-        <h2 class="text-lg font-semibold">Politica de devolución.</h2>
+        <h2 class="text-lg font-semibold text-black">Política de devolución</h2>
         <MyListItemsFooter data={ReturnPolicy} />
 
-        <h2 class="text-lg font-semibold">Politica de entrega de equipos.</h2>
+        <h2 class="text-lg font-semibold text-black mt-4">
+          Política de entrega
+        </h2>
         <MyListItemsFooter data={EquipmentDeliveryPolicy} />
       </div>
-    </section>
+    </nav>
 
-    <footer
-      class="text-center text-gray-500 laptop:flex laptop:justify-between"
+    <div
+      class="text-center text-gray-500 laptop:flex laptop:justify-between laptop:items-center mt-4"
     >
-      <h3>
-        Copyright © 2025 Servitec Halachó. Todos los derechos reservados.
-      </h3>
-      <h4 class="my-2">Desarrollado por: Alexis🧢Chim</h4>
-    </footer>
+      <h3>© 2025 Servitec Halachó. Todos los derechos reservados.</h3>
+      <h4 class="my-2 laptop:my-0">Desarrollado por: Alexis🧢Chim</h4>
+    </div>
   </ContainerCenter>
 </footer>

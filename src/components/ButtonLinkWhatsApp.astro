@@ -2,26 +2,31 @@
 import { twMerge } from "tailwind-merge";
 
 const defaultMessage = `¡Hola! 👋 Me gustaría solicitar sus servicios de mantenimiento para equipos de cómputo y celulares.
-  
-  Por favor, indíquenme cómo proceder o si necesitan más detalles sobre los equipos.
 
-  Gracias y quedo atento a su respuesta.`;
+Por favor, indíquenme cómo proceder o si necesitan más detalles sobre los equipos.
 
-  const defaultTitle = "+Información";
+Gracias y quedo atento a su respuesta.`;
 
-  const { message = defaultMessage, title = defaultTitle, className} = Astro.props;
+const defaultTitle = "+Información";
 
-  let whatsappLink = `https://wa.me/525656401126?text=${encodeURIComponent(
-    message
-  )}`;
+const {
+  message = defaultMessage,
+  title = defaultTitle,
+  className,
+} = Astro.props;
+
+const whatsappLink = `https://wa.me/525656401126?text=${encodeURIComponent(message)}`;
 ---
 
 <a
   href={whatsappLink}
   target="_blank"
   rel="noopener noreferrer"
-  class={twMerge("flex justify-center items-center bg-black hover:bg-gray-800 text-white rounded-md px-8 py-2 font-medium transition-all duration-300 ease-in-out transform hover:shadow-lg", className)}
-  class=""
-    >
-    {title}
+  aria-label={`Abrir conversación en WhatsApp con el mensaje: ${title}`}
+  class={twMerge(
+    "flex justify-center items-center bg-black hover:bg-gray-800 text-white rounded-md px-8 py-2 font-medium transition-all duration-300 ease-in-out transform hover:shadow-lg",
+    className
+  )}
+>
+  {title}
 </a>

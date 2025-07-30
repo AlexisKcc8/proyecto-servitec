@@ -4,9 +4,14 @@ import CardIncentive from "@components/CardIncentive.astro";
 import { incentives } from "@data/incentives";
 ---
 
-<section class="min-h-screen text-center my-4 bg-servitec-graySection pt-12">
-  <header class="text-start laptop:w-4/5 m-auto px-5 laptop:p-0">
+<section
+  class="min-h-screen text-center my-4 bg-servitec-graySection pt-12"
+  aria-labelledby="titulo-incentivos"
+  role="region"
+>
+  <header class="text-start laptop:w-4/5 mx-auto px-5 laptop:px-0">
     <h2
+      id="titulo-incentivos"
       class="text-4xl font-semibold tracking-tight leading-none laptop:text-6xl"
       data-aos="fade"
     >
@@ -15,7 +20,15 @@ import { incentives } from "@data/incentives";
     </h2>
   </header>
 
-  <Carousel carouselId="incentives-carousel" class="gap-4">
-    {incentives.map((incentive) => <CardIncentive incentive={incentive} />)}
+  <Carousel
+    carouselId="incentives-carousel"
+    class="gap-4 mt-8"
+    aria-label="Carrusel de beneficios de comprar en Servitec"
+  >
+    {
+      incentives.map((incentive) => (
+        <CardIncentive incentive={incentive} key={incentive.title} />
+      ))
+    }
   </Carousel>
 </section>

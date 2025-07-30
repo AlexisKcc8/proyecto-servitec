@@ -1,54 +1,51 @@
 ---
 import ContainerCenter from "@components/ContainerCenter.astro";
 import { Image } from "astro:assets";
-// import bgLocalServitec from "@assets/banner-map/banner-map-local.jpg"
 import bgLocalServitec from "@assets/banner-map/local-servitec-ghibli.png";
 ---
 
 <section
-  class="w-full min-h-screen flex items-center justify-center relative overflow-hidden"
+  class="relative w-full min-h-screen flex items-center justify-center overflow-hidden"
+  aria-labelledby="store-visit-title"
 >
   <ContainerCenter>
-    <header class="my-8">
-      <h2
-        class="text-4xl font-semibold tracking-tight leading-none laptop:text-6xl"
+    <header class="my-8 text-center">
+      <h1
+        id="store-visit-title"
+        class="text-4xl laptop:text-6xl font-semibold tracking-tight leading-tight text-white"
         data-aos="fade"
       >
-        Ven y visítanos
-      </h2>
-      <h2
-        class="text-4xl font-semibold tracking-tight leading-none laptop:text-6xl"
-        data-aos="fade"
-      >
-        en nuestra sucursal.
-      </h2>
+        Ven y visítanos en nuestra sucursal.
+      </h1>
     </header>
 
     <article
-      class="rounded-2xl min-w-[90vw] max-w-[92vw] min-h-[60dvh] laptop:flex laptop:w-full laptop:min-h-[90dvh] relative overflow-hidden"
+      class="relative overflow-hidden rounded-2xl min-w-[90vw] max-w-[92vw] min-h-[60dvh] laptop:w-full laptop:min-h-[90dvh] laptop:flex"
       data-aos="fade"
+      aria-label="Ubicación física de la sucursal"
     >
       <Image
         src={bgLocalServitec}
-        alt="our store awareness"
-        class="object-cover w-full h-full absolute top-0 left-0"
+        alt="Ubicación física de la sucursal de Servitec"
+        class="absolute top-0 left-0 w-full h-full object-cover"
+        loading="lazy"
       />
       <div
-        class="w-full h-full bg-[#00000090] absolute top-0 left-0 flex justify-center items-start laptop:items-center laptop:justify-start"
+        class="absolute inset-0 bg-black/60 flex flex-col justify-start items-center text-center laptop:justify-center laptop:items-start laptop:text-left laptop:pl-16"
       >
-        <div
-          class="flex flex-col items-center justify-center text-center pt-16 laptop:pt-0 laptop:pl-16"
-        >
-          <h2 class="font-bold text-xl laptop:text-5xl text-white mb-4">
-            C. 23 & Calle 20, La Soledad, <br /> 97830 Halachó, Yuc.
-          </h2>
+        <div class="pt-16 laptop:pt-0 px-4">
+          <p
+            class="text-white text-xl laptop:text-5xl font-bold mb-4 max-w-[30ch]"
+          >
+            C. 23 & Calle 20, La Soledad,<br />97830 Halachó, Yuc.
+          </p>
           <a
             href="https://maps.app.goo.gl/3f51munDDgaBi1Su6"
             rel="noreferrer"
             target="_blank"
-            class="z-10 laptop:text-xl rounded-md bg-white text-black p-2 font-semibold hover:bg-servitect-900 ease-in duration-300"
+            class="inline-block z-10 laptop:text-xl rounded-md bg-white text-black px-4 py-2 font-semibold hover:bg-servitec-900 hover:text-white transition-all duration-300"
           >
-            🗺️Ver mapa
+            🗺️ Ver mapa
           </a>
         </div>
       </div>

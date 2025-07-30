@@ -1,40 +1,40 @@
 ---
 import "@styles/global.css";
-import Layout from '../layouts/Layout.astro';
-import Hero from '@components/sections/Hero.astro';
-import BannerBrand from '@components/sections/BannerBrand.astro';
-import BannerMercadoPago from '@components/sections/BannerMercadoPago.astro';
-import BannerMagSafe from '@components/sections/BannerMagSafe.astro';
-import BannerMap from '@components/sections/BannerMap.astro';
+import Layout from "../layouts/Layout.astro";
+import Hero from "@components/sections/Hero.astro";
+import BannerBrand from "@components/sections/BannerBrand.astro";
+import BannerMercadoPago from "@components/sections/BannerMercadoPago.astro";
+import BannerMagSafe from "@components/sections/BannerMagSafe.astro";
+import BannerMap from "@components/sections/BannerMap.astro";
 
-import PurchaseMethod from '@components/sections/PurchaseMethod.astro';
-import FloatingButton from '@components/FloatingButton.astro';
-import ProductCarousel from '@components/sections/ProductCarousel.astro';
-import IncentivesCarousel from '@components/sections/IncentivesCarousel.astro';
-import MyFooter from '@components/sections/MyFooter.astro';
-import OurServices from '@components/sections/OurServices.astro';
+import PurchaseMethod from "@components/sections/PurchaseMethod.astro";
+import FloatingButton from "@components/FloatingButton.astro";
+import ProductCarousel from "@components/sections/ProductCarousel.astro";
+import IncentivesCarousel from "@components/sections/IncentivesCarousel.astro";
+import MyFooter from "@components/sections/MyFooter.astro";
+import OurServices from "@components/sections/OurServices.astro";
 
 import VideoPlayer from "@components/sections/VideoPlayer/VideoPlayer.astro";
-import videoServitec from "@assets/videos/GOKU2902.mp4"
-
+import videoServitec from "@assets/videos/GOKU2902.mp4";
 ---
 
 <Layout title="Servitec: Servicios de Mantenimiento y Venta de Tecnología">
-	<Hero />
-	<BannerBrand />
-	<VideoPlayer 
-		videoSrc={videoServitec}
-    thumbnailSrc="/layer-video-servitec1.png"
-	/>
-	<ProductCarousel />
-	<PurchaseMethod />
-	<BannerMercadoPago />
-	<IncentivesCarousel />
-	<OurServices />
-	<BannerMap />
-	<BannerMagSafe />
-	<MyFooter/>
-	<FloatingButton />
+  <Hero />
+  <BannerBrand />
+  <VideoPlayer
+    videoSrc={videoServitec}
+    thumbnailSrc="/layer-video-servitec1.webp"
+  />
+  <ProductCarousel />
+  <PurchaseMethod />
+
+  <BannerMercadoPago />
+  <IncentivesCarousel />
+  <OurServices />
+  <BannerMap />
+  <BannerMagSafe />
+  <MyFooter />
+  <FloatingButton />
 </Layout>
 <script>
   import { initAOS } from "@scripts/aos";
