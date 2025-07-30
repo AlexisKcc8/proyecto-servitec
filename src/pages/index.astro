@@ -15,14 +15,16 @@ import MyFooter from "@components/sections/MyFooter.astro";
 import OurServices from "@components/sections/OurServices.astro";
 
 import VideoPlayer from "@components/sections/VideoPlayer/VideoPlayer.astro";
-import videoServitec from "@assets/videos/GOKU2902.mp4";
+import videoServitecWebm from "@assets/videos/GOKU2902.webm";
+import videoServitecMp4 from "@assets/videos/GOKU2902.mp4";
 ---
 
 <Layout title="Servitec: Servicios de Mantenimiento y Venta de Tecnología">
   <Hero />
   <BannerBrand />
   <VideoPlayer
-    videoSrc={videoServitec}
+    videoSrcWepm={videoServitecWebm}
+    videoSrcMp4={videoServitecMp4}
     thumbnailSrc="/layer-video-servitec1.webp"
   />
   <ProductCarousel />

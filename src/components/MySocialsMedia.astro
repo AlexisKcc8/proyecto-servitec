@@ -1,22 +1,22 @@
 ---
-import { socialMedia } from "@data/dataSocialMedia"
-import { Icon } from "astro-icon/components"
-import { twMerge } from "tailwind-merge"
+import { socialMedia } from "@data/dataSocialMedia";
+import { Icon } from "astro-icon/components";
+import { twMerge } from "tailwind-merge";
 
-const {classBoxMain, classLinksItem, classItemImg} = Astro.props
+const { classBoxMain, classLinksItem, classItemImg } = Astro.props;
 ---
 
 <div class={twMerge("flex gap-4", classBoxMain)}>
-      {socialMedia.map((icon) => (
-        <a
-          class={twMerge("", classLinksItem)}
-          href={icon.url}
-          target="_blank"
-        >
-          <Icon
-            name={icon.name}
-            class={twMerge("", classItemImg)}
-          />
-        </a>
-      ))}
+  {
+    socialMedia.map((icon) => (
+      <a
+        class={twMerge("", classLinksItem)}
+        href={icon.url}
+        target="_blank"
+        aria-label={icon.label}
+      >
+        <Icon name={icon.name} class={twMerge("", classItemImg)} />
+      </a>
+    ))
+  }
 </div>
