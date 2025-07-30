@@ -1,26 +1,24 @@
 ---
 import { twMerge } from "tailwind-merge";
 
-
 const { className, url, isTarget = true } = Astro.props;
-
-const hasContent = Astro.slots;
+const hasContent = Astro.slots.default;
+const isExternal = isTarget && url && !url.startsWith("#");
 ---
-<a
-    data-aos="fade" 
-    href={url}
-    target={isTarget ? "_blank" : undefined}
-    class={twMerge("text-base sm:text-lg px-6 sm:px-8 py-2 laptop:py-3 rounded-md transition-all duration-300 laptop:hover:cursor-pointer animation-fill-mode: forwards bg-black flex items-center justify-center text-white hover:bg-slate-800 w-auto", className)}
-    >
-      <!-- <StoreSvg />{" "} -->
-      <span class="ml-2">
-        {
-          hasContent ? (
-            <slot />
-          ) : (
-            "Mirar productos"
-          )
-        }
-      </span>
-</a>
 
+<a
+  href={url}
+  target={isTarget ? "_blank" : undefined}
+  rel={isExternal ? "noopener noreferrer" : undefined}
+  role="link"
+  aria-label={hasContent ? undefined : "Mirar productos"}
+  data-aos="fade"
+  class={twMerge(
+    "text-base sm:text-lg px-6 sm:px-8 py-2 laptop:py-3 rounded-md transition-all duration-300 laptop:hover:cursor-pointer bg-black flex items-center justify-center text-white hover:bg-slate-800 w-auto",
+    className
+  )}
+>
+  <span class="ml-2">
+    <slot> Mirar productos </slot>
+  </span>
+</a>

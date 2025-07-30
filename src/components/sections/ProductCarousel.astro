@@ -6,38 +6,58 @@ import { products } from "@data/dataProducts";
 import { Image } from "astro:assets";
 ---
 
-<section class="text-center min-h-screen my-4">
+<section
+  class="text-center min-h-screen py-12 laptop:py-20"
+  aria-labelledby="section-featured-products"
+  role="region"
+>
   <header class="text-start laptop:w-4/5 m-auto px-5 laptop:p-0">
     <h2
+      id="section-featured-products"
       class="animate-fill-forwards text-4xl font-semibold tracking-tight leading-none laptop:text-6xl"
       data-aos="fade"
     >
       Nuestros productos más vendidos
     </h2>
-    <h4 class="text-xl text-gray-700 laptop:text-2xl" data-aos="fade">
+    <p class="text-xl text-gray-700 laptop:text-2xl" data-aos="fade">
       Adquiere calidad a precios top.
-    </h4>
+    </p>
   </header>
 
-  <Carousel carouselId="product-carousel">
-    <div
+  <Carousel
+    carouselId="product-carousel"
+    aria-label="Carrusel de productos más vendidos"
+  >
+    {/* Tarjeta introductoria */}
+    <article
       class="relative w-80 card-product text-start flex flex-col snap-center flex-shrink-0 overflow-hidden hover:cursor-pointer will-change-[transform] laptop:w-96"
       data-aos="fade-up"
     >
       <div class="p-4">
-        <h2 class="font-bold text-3xl mt-4">Ponte a la moda</h2>
+        <h3 class="font-bold text-3xl mt-4">Ponte a la moda</h3>
         <p class="text-xl tracking-wide text-gray-700">
           Descubre los nuevos colores, funcionalidades y adquiere tus accesorios
-          favoritos en servitec halachó.
+          favoritos en Servitec Halachó.
         </p>
       </div>
       <Image
         src={GirlShoppingCartCover}
-        alt="logo Servitec"
+        alt="Chica feliz con productos tecnológicos en carrito"
         class="object-cover w-full h-full aspect-square mt-10"
+        loading="lazy"
+        width={384}
+        height={384}
       />
-    </div>
+    </article>
 
-    {products.map((product) => <AppleStyleProductCard productData={product} />)}
+    {/* Productos renderizados */}
+    {
+      products.map((product) => (
+        <AppleStyleProductCard
+          productData={product}
+          key={`product-${product?.id || product?.name}`}
+        />
+      ))
+    }
   </Carousel>
 </section>

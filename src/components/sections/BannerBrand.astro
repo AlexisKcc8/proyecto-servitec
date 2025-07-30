@@ -1,8 +1,7 @@
 ---
 import ContainerCenter from "@components/ContainerCenter.astro";
-// import {productsBrands} from "@data/dataInfo"
 import { Icon } from "astro-icon/components";
-// import { Image } from "astro:assets"
+
 const iconBrands = [
   "elegate",
   "ios",
@@ -17,39 +16,58 @@ const iconBrands = [
 
 <div class="flex items-center w-full justify-center px-6 laptop:px-0">
   <ContainerCenter class="flex w-full h-fit rounded-xl">
-    <div class="relative overflow-hidden flex">
+    <div
+      class="relative overflow-hidden flex w-full"
+      role="list"
+      aria-label="Marcas tecnológicas disponibles"
+    >
       <!-- Fade izquierdo -->
       <div
         class="pointer-events-none absolute left-0 top-0 h-full w-10 bg-gradient-to-r from-white via-white/80 to-transparent z-10"
+        aria-hidden="true"
       >
       </div>
 
       <!-- Fade derecho -->
       <div
         class="pointer-events-none absolute right-0 top-0 h-full w-10 bg-gradient-to-l from-white via-white/80 to-transparent z-10"
+        aria-hidden="true"
       >
       </div>
 
+      <!-- Lista principal -->
       <div class="flex gap-5 pr-5 group-icons flex-[0_0_100%]">
         {
-          iconBrands.map((icon) => (
+          iconBrands.map((icon, index) => (
             <div
-              class="w-full h-full justify-center items-center"
+              id={`brand-${icon}-${index}`}
+              class="w-full h-full flex items-center justify-center"
+              role="listitem"
               data-aos="fade"
             >
-              <Icon name={icon} class="w-28 h-28 justify-center items-center" />
+              <Icon
+                name={icon}
+                class="w-28 h-28"
+                aria-label={`Marca: ${icon}`}
+              />
             </div>
           ))
         }
       </div>
-      <div aria-hidden class="flex gap-5 pr-5 group-icons flex-[0_0_100%]">
+
+      <!-- Repetición para animación infinita (oculto a lectores) -->
+      <div
+        class="flex gap-5 pr-5 group-icons flex-[0_0_100%]"
+        aria-hidden="true"
+      >
         {
-          iconBrands.map((icon) => (
+          iconBrands.map((icon, index) => (
             <div
-              class="w-full h-full justify-center items-center"
+              id={`brand-copy-${icon}-${index}`}
+              class="w-full h-full flex items-center justify-center"
               data-aos="fade"
             >
-              <Icon name={icon} class="w-28 h-28 justify-center items-center" />
+              <Icon name={icon} class="w-28 h-28" />
             </div>
           ))
         }
@@ -57,3 +75,11 @@ const iconBrands = [
     </div>
   </ContainerCenter>
 </div>
+
+<!-- 
+role="list" y role="listitem" para mejorar accesibilidad semántica. 
+aria-label en el contenedor para describir el propósito. 
+id en cada ítem del .map() para evitar advertencias en React-like entornos. aria-hidden="true" en el segundo loop que solo es decorativo (por ejemplo, para sliders infinitos). 
+Limpieza de clases como justify-center dentro de íconos (innecesaria si ya hay flex en el
+contenedor).
+ -->

@@ -11,85 +11,100 @@ import logoServitec from "@assets/hero/logo-servitec-tornillo.webp";
 import { twMerge } from "tailwind-merge";
 import LinkButton from "@components/LinkButton.astro";
 
-let imagesAbsolute = [
-  //LADO DERECHO
+const imagesAbsolute = [
   {
     src: teclado,
-    alt: "img-teclado",
+    alt: "Teclado ergonómico moderno",
     class: "top-0 -left-1/5 laptop:top-1/4 laptop:left-0",
     aosAnimate: "fade-right",
   },
   {
     src: mouse,
-    alt: "img-mouse",
+    alt: "Mouse inalámbrico",
     class: "top-1/5 -left-1/5 laptop:top-7/12 laptop:left-0",
     aosAnimate: "fade-right",
   },
   {
     src: camara,
-    alt: "img-mouse",
+    alt: "Cámara de seguridad inteligente",
     class: "top-3/5 -left-1/5 laptop:top-2/3 laptop:left-2/12",
     aosAnimate: "fade-right",
   },
-
-  //LADO IZQUIERDO
   {
     src: phoneGradient,
-    alt: "img-phone-gradient",
+    alt: "Smartphone con fondo degradado",
     class: "top-0 -right-1/5 laptop:top-1/4 laptop:right-0",
     aosAnimate: "fade-left",
   },
   {
     src: laptop,
-    alt: "img-laptop",
+    alt: "Laptop flotante de alta gama",
     class: "top-[20%] -right-1/5 laptop:top-7/12 laptop:right-0",
     aosAnimate: "fade-left",
   },
   {
     src: audifonos,
-    alt: "img-audifonos",
+    alt: "Audífonos con cancelación de ruido",
     class: "top-3/5 -right-1/5 laptop:top-2/3 laptop:right-2/12",
     aosAnimate: "fade-left",
   },
 ];
 ---
 
-<section class="relative w-full min-h-screen flex items-center justify-center">
+<section
+  class="relative w-full min-h-screen flex items-center justify-center"
+  aria-labelledby="hero-title"
+>
   <div
     class="absolute w-1/2 h-full bg-sky-300 opacity-40 blur-3xl rounded-full -z-10"
+    aria-hidden="true"
     data-aos="fade"
   >
   </div>
+
   <ContainerCenter
     class="relative flex flex-col items-center justify-center text-center laptop:px-4"
   >
-    {/* Difuminaciones laterales */}
+    {/* Difuminados laterales */}
     <div
-      class="pointer-events-none absolute inset-y-0 left-0 w-4 bg-gradient-to-r from-white to-transparent z-10 laptop:w-16"
+      class="pointer-events-none absolute inset-y-0 left-0 w-4 laptop:w-16 bg-gradient-to-r from-white to-transparent z-10"
+      aria-hidden="true"
     >
     </div>
     <div
-      class="pointer-events-none absolute inset-y-0 right-0 w-4 bg-gradient-to-l from-white to-transparent z-10 laptop:w-16"
+      class="pointer-events-none absolute inset-y-0 right-0 w-4 laptop:w-16 bg-gradient-to-l from-white to-transparent z-10"
+      aria-hidden="true"
     >
     </div>
 
+    {/* Logo */}
     <div class="flex flex-col items-center justify-center w-full">
       <Image
         src={logoServitec}
-        alt="logo Servitec"
+        alt="Logo de Servitec con tornillo"
         class="w-28 h-28 object-contain object-center"
         data-aos="fade-up"
+        loading="eager"
+        width={112}
+        height={112}
       />
-      <h1 class="text-xl font-bold m-0 laptop:text-3xl title-hero">
+      <h1
+        id="hero-title"
+        class="text-xl font-bold m-0 laptop:text-3xl title-hero"
+      >
         Servitec <span class="text-servitec-800">Halachó</span>
       </h1>
     </div>
-    <h4
+
+    {/* Título Principal */}
+    <h2
       class="text-4xl font-bold w-full prose leading-snug m-0 p-0 laptop:max-w-11/12 laptop:text-7xl"
       data-aos="fade"
     >
       Tecnología, seguridad y mantenimiento en un solo lugar.
-    </h4>
+    </h2>
+
+    {/* Imágenes flotantes decorativas */}
     {
       imagesAbsolute.map((image) => (
         <Image
@@ -100,9 +115,14 @@ let imagesAbsolute = [
             image.class
           )}
           data-aos={image.aosAnimate}
+          loading="lazy"
+          width={144}
+          height={144}
         />
       ))
     }
+
+    {/* Subtítulo con gradiente */}
     <p
       class="text-3xl font-semibold bg-gradient-to-r from-sky-500 via-purple-500 to-orange-500 text-transparent bg-clip-text my-4 laptop:text-4xl"
       data-aos="fade-bottom"
@@ -110,6 +130,7 @@ let imagesAbsolute = [
       Diseñado para potenciar tu día a día.
     </p>
 
+    {/* Botones */}
     <footer class="flex flex-col my-4 gap-4 laptop:flex-row">
       <LinkButton
         url="https://drive.google.com/file/d/11hThknDbDiQxv5wgVwM1dPBEbYelLlCr/view?usp=drive_links"
@@ -125,8 +146,10 @@ let imagesAbsolute = [
         👀Mira lo que hacemos
       </LinkButton>
     </footer>
-    <p class="font-semibold mt-6 text-gray-500" data-aos="fade-up">
-      🔎Encuentra lo último en tecnología, protege tu hogar🏠 y mantén tus
+
+    {/* Descripción final */}
+    <p class="font-semibold mt-6 text-gray-500 max-w-2xl" data-aos="fade-up">
+      🔎 Encuentra lo último en tecnología, protege tu hogar 🏠 y mantén tus
       dispositivos en perfecto estado.
     </p>
   </ContainerCenter>

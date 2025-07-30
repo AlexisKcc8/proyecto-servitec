@@ -2,14 +2,15 @@
 import type { HTMLAttributes } from "astro/types";
 import { twMerge } from "tailwind-merge";
 
-// create interface with extends HTMLAttributes<"section">
+// Tipado para aceptar props HTML válidas de section
 interface Props extends HTMLAttributes<"section"> {}
 
-const { class: className } = Astro.props;
+const { class: className, ...rest } = Astro.props;
 ---
 
 <section
   class={twMerge("laptop:w-[80%] py-12 overflow-hidden px-6", className)}
+  {...rest}
 >
   <slot />
 </section>
