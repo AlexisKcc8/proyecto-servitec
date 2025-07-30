@@ -17,9 +17,10 @@ const { carouselId, class: className } = Astro.props;
     </div>
   </div>
   <footer
-    class={`flex justify-end items-center py-2 px-4 gap-4 text-black font-bold text-xl laptop:pr-14`}
+    class="flex justify-end items-center py-2 px-4 gap-4 text-black font-bold text-xl laptop:pr-14"
   >
     <button
+      aria-label="Ir al elemento anterior del carrusel"
       data-prev={carouselId}
       class="bg-[#dcdce1] w-[2.5rem] h-[2.5rem] rounded-full z-10 flex justify-center items-center laptop:hover:cursor-pointer"
     >
@@ -27,6 +28,7 @@ const { carouselId, class: className } = Astro.props;
     </button>
 
     <button
+      aria-label="Ir al siguiente elemento del carrusel"
       data-next={carouselId}
       class="bg-[#dcdce1] w-[2.5rem] h-[2.5rem] rounded-full z-10 flex justify-center items-center laptop:hover:cursor-pointer"
     >

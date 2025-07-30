@@ -10,7 +10,6 @@ const { title, description, icon } = incentive;
   data-aos="fade-up"
   data-aos-offset="120"
   aria-labelledby={`incentive-title-${title.replace(/\s+/g, "-").toLowerCase()}`}
-  role="group"
 >
   <header class="flex flex-col space-y-1.5">
     <Icon
@@ -31,11 +30,11 @@ const { title, description, icon } = incentive;
     <p class="text-base text-gray-600">{description}</p>
   </section>
 
-  <footer class="flex gap-1" aria-label="Valoración con estrellas">
+  <div class="flex gap-1" role="img" aria-label="Valoración: 5 de 5 estrellas">
     {
       Array.from({ length: 5 }).map((_, index) => (
         <Icon name="star" class="h-6 w-6 text-yellow-400" aria-hidden="true" />
       ))
     }
-  </footer>
+  </div>
 </article>
